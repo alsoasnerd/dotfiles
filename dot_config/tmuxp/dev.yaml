@@ -8,6 +8,6 @@ windows:
             shell_command:
                 - nvim ~/projects
           - shell_command:
-                - nvim ~/Documents/notes.txt
+                - taskwarrior-tui
           - shell_command:
                 - ytop
