@@ -1,0 +1,21 @@
+#!/bin/bash
+
+chezmoi init
+
+sudo pacman -Syyu \
+    alacritty \
+    firefox-developer-edition \
+    curl \
+    flameshot \
+    timeshift \
+    task \
+    timew \
+    taskwarrior-tui \
+    flatpak
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # rustup install
+
+source ~/.zshrc
+
+rustup update stable
+cargo install ytop tokio exa bat
