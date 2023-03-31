@@ -6,7 +6,7 @@ windows:
       panes:
           - focus: true
             shell_command:
-                - nvim ~/projects
+                - won
           - shell_command:
                 - taskwarrior-tui
           - shell_command:
