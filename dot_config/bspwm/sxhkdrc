@@ -49,7 +49,7 @@ ctrl + alt + m
 	bspmusic
 
 # Lockscreen
-super + l
+super + shift + l
     betterlockscreen --lock
 
 ##---------- System Keys ----------##
@@ -124,10 +124,6 @@ super + control + {Left,Right,Up,Down}
 super + alt + {Left,Right,Up,Down}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 
-# Split horizontal, vertical or cancel
-super + {h,v,q}
-	bspc node -p {east,south,cancel}
-
 # Preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -152,9 +148,9 @@ super + shift + space
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-# Change focus to next window, including floating window
-alt + {_,shift + }Tab
-	bspc node -f {next.local,prev.local}
+# Change focus to next and previous window
+super + {l,h}
+    bspc node -f {next,prev}.normal
 
 # Switch to last opened workspace
 super + {Tab,grave}
