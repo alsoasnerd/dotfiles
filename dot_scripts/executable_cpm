@@ -1,0 +1,30 @@
+#!/bin/bash
+# cpm is an acronym for container package manager
+
+case "$1" in
+    -i)
+        if yay -S $2; then
+            returned_which=$(which $2 | head -n 1)
+            if distrobox-export -b $returned_which -ep ~/.local/share/distrobox; then
+                distrobox-export --app $2 > /dev/null 2>&1;
+                echo "Package $2 installed and exported successfully."
+            else
+                echo "Error exporting package $2."
+            fi
+        else
+            echo "Error installing package $2."
+        fi
+        ;;
+    -u)
+        distrobox-export --app $2 --delete;
+        if yay -R $2; then
+            rm -rf ~/.local/share/distrobox/$2
+            echo "Package $2 uninstalled successfully."
+        else
+            echo "Error uninstalling package $2."
+        fi
+        ;;
+    *)
+        echo "Invalid option. Usage: cpm [-i|-u] package_name"
+        ;;
+esac
