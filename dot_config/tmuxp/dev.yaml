@@ -10,4 +10,4 @@ windows:
           - shell_command:
                 - taskwarrior-tui
           - shell_command:
-                - ytop
+                - htop
