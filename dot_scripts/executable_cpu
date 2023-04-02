@@ -1,0 +1,5 @@
+# cpu is a acronym for containerized program uninstaller
+#!/bin/bash
+
+yay -R $1
+rm -rf ~/.local/share/distrobox/$1

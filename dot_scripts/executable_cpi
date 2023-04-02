@@ -1,0 +1,4 @@
+# cpi is a acronym for containerized program installer
+#!/bin/bash
+
+yay -S $1 && returned_which=$(which $1 | head -n 1) && distrobox-export -b $returned_which -ep ~/.local/share/distrobox
