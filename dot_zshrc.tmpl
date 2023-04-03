@@ -8,7 +8,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=~/.cargo/bin:~/.local/share/distrobox:$PATH
+export PATH=~/.cargo/bin:~/.local/share/distrobox/distrotunnel/bin:$PATH
 
 export EDITOR='nvim'
 
@@ -55,12 +55,18 @@ alias bat='bat --style=auto'
 alias ctm='tmuxp load ~/.config/tmuxp/dev.yaml' # ctm is an acronym for code, task, monitor
 
 # won
-alias won='source ~/.scripts/won' # won is an acronym for "work on"
+alias won='source scripts/won' # won is an acronym for "work on"
+
+# distrotunnel
+alias distrotunnel='distrobox enter distrotunnel'
+alias distrotunnel_setup='source $DISTROTUNNEL/scripts/setup' 
+alias distrotunnel_unsetup='source $DISTROTUNNEL/scripts/unsetup' 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export DISTROTUNNEL="{{ .distrotunnel.path }}";
 export OPENAI_API_KEY="{{ .openai.secretKey }}";
 
 # won keybind

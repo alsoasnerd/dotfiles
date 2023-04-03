@@ -1,6 +1,6 @@
 #!/bin/bash
 
-~/.local/share/distrobox/distrotunnel/scripts/dmt --noconfirm -a \
+$DISTROTUNNEL/scripts/dmt --noconfirm -a \
         atuin \
         bat \
         chezmoi \
@@ -28,5 +28,5 @@
         ; sudo pacman -Scc --noconfirm \
         ; sudo rm -Rf /var/cache/pacman/pkg/*.
 
-distrobox-export -b ~/.local/share/distrobox/distrotunnel/scripts/dmt -ep ~/.local/share/distrobox/distrotunnel/bin 
-distrobox-export -b ~/.local/share/distrobox/distrotunnel/scripts/won -ep ~/.local/share/distrobox/distrotunnel/bin 
+distrobox-export -b $DISTROTUNNEL/scripts/dmt -ep $DISTROTUNNEL/bin 
+distrobox-export -b $DISTROTUNNEL/scripts/won -ep $DISTROTUNNEL/bin 

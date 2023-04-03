@@ -13,7 +13,7 @@ case "$1" in
         for pkg in "$@"; do
             if yay -S $noconfirm $pkg; then
                 returned_which=$(which $pkg | head -n 1)
-                if distrobox-export -b $returned_which -ep ~/.local/share/distrobox/distrotunnel/bin; then
+                if distrobox-export -b $returned_which -ep $DISTROTUNNEL/bin; then
                     distrobox-export --app $pkg > /dev/null 2>&1;
                     echo "Package $pkg installed and exported successfully."
                 else
@@ -29,7 +29,7 @@ case "$1" in
         for pkg in "$@"; do
             distrobox-export --app $pkg --delete;
             if yay -R $noconfirm $pkg; then
-                rm -rf ~/.local/share/distrobox/distrotunnel/bin/$pkg
+                rm -rf $DISTROTUNNEL/bin/$pkg
                 echo "Package $pkg uninstalled successfully."
             else
                 echo "Error uninstalling package $pkg."
@@ -40,9 +40,6 @@ case "$1" in
         if yay -Syu $noconfirm; then
             echo "Packages updated successfully."
         fi
-        ;;
-    -e)
-        distrobox enter distrotunnel
         ;;
     -h)
         echo "cmt is an acronym for container management tool"
