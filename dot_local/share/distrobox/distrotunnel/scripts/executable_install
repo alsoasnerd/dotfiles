@@ -28,5 +28,6 @@ $DISTROTUNNEL/scripts/dmt --noconfirm -a \
         ; sudo pacman -Scc --noconfirm \
         ; sudo rm -Rf /var/cache/pacman/pkg/*.
 
+distrobox-export -b $(which git | head -n 1) -ep $DISTROTUNNEL/bin
 distrobox-export -b $DISTROTUNNEL/scripts/dmt -ep $DISTROTUNNEL/bin 
 distrobox-export -b $DISTROTUNNEL/scripts/won -ep $DISTROTUNNEL/bin 
