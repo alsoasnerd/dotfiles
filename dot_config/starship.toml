@@ -1,6 +1,6 @@
 # Move the directory to the second line
 format = '$all\[$username:$hostname\] '
-command_timeout = 3
+command_timeout = 1000
 
 [character]
 success_symbol = "⬢"
