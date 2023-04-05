@@ -1,5 +1,6 @@
 # Move the directory to the second line
 format = '$all\[$username:$hostname\] '
+command_timeout = 3
 
 [character]
 success_symbol = "⬢"
@@ -15,3 +16,4 @@ show_always = true
 ssh_only = false
 format = '[$hostname](bold red)'
 disabled = false
+
