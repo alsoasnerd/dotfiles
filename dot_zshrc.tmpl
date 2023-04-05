@@ -6,6 +6,7 @@ export DISTROTUNNEL={{ .distrotunnel.path }};
 export PATH=~/.cargo/bin:$DISTROTUNNEL/bin:$PATH
 export EDITOR='nvim'
 export OPENAI_API_KEY="{{ .openai.secretKey }}";
+export BROWSER='firefox-developer-edition'
 
 # add ~/.zsh to fpath
 fpath=(~/.zsh $fpath)
