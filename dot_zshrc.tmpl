@@ -21,6 +21,9 @@ bindkey '^R' history-incremental-search-backward
 # add ~/.zsh to fpath
 fpath=(~/.zsh $fpath)
 
+# load zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # load zsh plugins
 autoload -U compinit
 compinit -i
