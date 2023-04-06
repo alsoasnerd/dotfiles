@@ -8,7 +8,12 @@ export EDITOR='nvim'
 export OPENAI_API_KEY="{{ .openai.secretKey }}";
 export BROWSER='firefox-developer-edition'
 export SAVEHIST=1000
+export HISTSIZE=10000
 export HISTFILE=~/.zsh_history
+
+# set zsh options
+setopt appendhistory
+setopt SHARE_HISTORY
 
 # add ~/.zsh to fpath
 fpath=(~/.zsh $fpath)
