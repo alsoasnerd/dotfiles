@@ -15,6 +15,9 @@ export HISTFILE=~/.zsh_history
 setopt appendhistory
 setopt SHARE_HISTORY
 
+# set zsh keybinds
+bindkey '^R' history-incremental-search-backward
+
 # add ~/.zsh to fpath
 fpath=(~/.zsh $fpath)
 
@@ -53,9 +56,6 @@ alias distrotunnel_unsetup='source $DISTROTUNNEL/scripts/unsetup'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# won keybind
-bindkey 'C-f' won 
 
 neofetch
 
