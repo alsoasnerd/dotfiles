@@ -5,7 +5,7 @@
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
-super + Return
+super + BackSpace
 	bspterm
 
 # Terminal (floating)
