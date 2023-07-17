@@ -9,6 +9,9 @@ export SAVEHIST=1000
 export HISTSIZE=10000
 export HISTFILE=~/.zsh_history
 
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # set zsh options
 setopt appendhistory
 setopt SHARE_HISTORY
@@ -48,13 +51,13 @@ alias bat='bat --style=auto'
 # tmuxp
 alias ctm='tmuxp load ~/.config/tmuxp/dev.yaml' # ctm is an acronym for code, task, monitor
 
-# distrotunnel
-source ~/.local/share/distrobox/distrotunnel/scripts/distrotunnel.zsh
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# distrotunnel
+source /home/devales/.local/share/distrobox/distrotunnel/distrotunnel.zsh
 
 # set keyboard layout
 setxkbmap -layout us -variant altgr-intl
