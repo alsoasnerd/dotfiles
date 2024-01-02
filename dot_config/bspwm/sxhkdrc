@@ -36,6 +36,9 @@ super + {m,n,r,s,t,w,x}
 super + shift + {f,w,e}
 	{thunar,firefox-developer-edition,geany}
 
+super + shift + d
+    com.discordapp.Discord
+
 # Terminal Apps
 ctrl + alt + {v,r}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {nvim,ranger}
@@ -58,6 +61,10 @@ super + shift + l
 Print
 	flameshot gui
 	
+# Open obsidian diary note
+super + shift + n
+    ~/.local/bash/obsnewjournal
+
 # Brighness control
 XF86MonBrightness{Up,Down}
 	bspbrightness{ --inc, --dec}
