@@ -155,8 +155,8 @@ xsetroot -cursor_name left_ptr
 # Restore wallpaper
 bash ~/.fehbg
 
-# Start mpd
-exec mpd &
+# Enable aw-qt
+aw-qt &
 
 # Start bspwm scripts
 bspbar

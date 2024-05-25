@@ -9,6 +9,11 @@ export SAVEHIST=1000
 export HISTSIZE=10000
 export HISTFILE=~/.zsh_history
 
+# fyw
+export FYW_DIR="/home/devales/.config/fyw"
+export FYPM_DIR="/home/devales/.config/fyw/fypm"
+export FYSM_DIR="/home/devales/.config/fyw/fysm"
+
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -85,3 +90,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+source $FYW_DIR/config/fywrc
