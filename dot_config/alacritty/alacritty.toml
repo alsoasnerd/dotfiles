@@ -5,15 +5,16 @@ draw_bold_text_with_bright_colors = true
 background = "#000000"
 foreground = "#A9B1D6"
 
-[colors.primary.normal]
-black = "#32344A"
-blue = "#7AA2F7"
-cyan = "#449DAB"
-green = "#9ECE6A"
-magenta = "#AD8EE6"
-red = "#F7768E"
-white = "#787C99"
-yellow = "#E0AF68"
+# -- default color configuration
+# [colors.primary.normal]
+# black = "#32344A"
+# blue = "#7AA2F7"
+# cyan = "#449DAB"
+# green = "#9ECE6A"
+# magenta = "#AD8EE6"
+# red = "#F7768E"
+# white = "#787C99"
+# yellow = "#E0AF68"
 
 [font]
 size = 8.0

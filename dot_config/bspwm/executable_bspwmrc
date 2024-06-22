@@ -155,8 +155,11 @@ xsetroot -cursor_name left_ptr
 # Restore wallpaper
 bash ~/.fehbg
 
-# Enable aw-qt
-aw-qt &
+# Enable wacom tablet
+/home/devales/.local/bash/wacom
+
+# Flameshot
+flameshot &
 
 # Start bspwm scripts
 bspbar
@@ -164,3 +167,13 @@ bspcomp
 bspdunst
 bspfloat &
 
+# -- Magic Script --
+if test ! -e "$BSPLOCK"; then
+    _verify_eventual_tasks_
+
+    _verify_active_tasks_ >> /dev/null 2>&1 &
+    _verify_alarm_tasks_ >> "$FYSM_PERMA_LOGS/fypm/_verify_alarm_tasks_$(date +%Y-%m-%d)" 2>&1 &
+
+    echo "" > "$BSPLOCK"
+fi
+# -- Magic Script --

@@ -37,7 +37,7 @@ super + shift + {f,w,e}
 	{thunar,firefox-developer-edition,geany}
 
 super + shift + d
-    com.discordapp.Discord
+    discord
 
 # Terminal Apps
 ctrl + alt + {v,r}
@@ -77,9 +77,13 @@ XF86Audio{RaiseVolume,LowerVolume}
 XF86Audio{Mute,MicMute}
 	bspvolume{ --toggle, --toggle-mic}
 	
-# Music control
+# Music control (spotify)
 XF86Audio{Next,Prev,Play}
-	playerctl {next,previous,play-pause}
+	playerctl --player=spotify {next,previous,play-pause}
+
+# Sound control (chromium)
+ctrl + XF86Audio{Next,Prev,Play}
+    playerctl --player=chromium {next,previous,play-pause}
 
 ##---------- Bspwm ----------##
 

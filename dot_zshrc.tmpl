@@ -5,17 +5,16 @@ eval "$(starship init zsh)"
 export EDITOR='nvim'
 export OPENAI_API_KEY="{{ .openai.secretKey }}";
 export BROWSER='vivaldi-stable'
-export SAVEHIST=1000
-export HISTSIZE=10000
+export SAVEHIST=1000000000000000000
+export HISTSIZE=1000000000000000000
 export HISTFILE=~/.zsh_history
+export BSPDIR=/home/devales/.config/bspwm
 
 # fyw
 export FYW_DIR="/home/devales/.config/fyw"
 export FYPM_DIR="/home/devales/.config/fyw/fypm"
 export FYSM_DIR="/home/devales/.config/fyw/fysm"
-
-# Cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+export BSPLOCK=/tmp/fysm/bspwm.lock
 
 # set zsh options
 setopt appendhistory
@@ -62,18 +61,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # distrotunnel
-source /home/devales/.local/share/distrobox/distrotunnel/distrotunnel.zsh
+# source /home/devales/.local/share/distrobox/distrotunnel/distrotunnel.zsh
 
 # set keyboard layout
 setxkbmap -layout us -variant altgr-intl
 
-fastfetch
-
-# load zsh-syntax-highlighting, should be last line
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Add cargo and bash scripts to path
-export PATH="$HOME/.local/bash:$HOME/.cargo/bin:$PATH"
+# Add cargo, bash scripts and nix to path
+export PATH="$HOME/.local/bash:$HOME/.config/llamafile/models:$HOME/.cargo/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -90,5 +84,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
+# load fzf history
+source <(fzf --zsh)
 source $FYW_DIR/config/fywrc
+
+# Mise setup
+eval "$(/home/devales/.local/bin/mise activate zsh)"
+
+# load zsh-syntax-highlighting, should be last line
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fastfetch
