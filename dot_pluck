@@ -1,0 +1,37 @@
+delay 1
+allow localhost
+allow 162.159.128.232
+allow 162.159.128.233
+allow 162.159.133.233
+allow 162.159.133.234
+allow 162.159.136.234
+allow 162.159.137.232
+allow otherwise
+allow program /usr/bin/discord
+flee word ai
+flee word ollama
+flee word rag
+feature system
+delay 5
+allow duckduckgo.com
+allow github.com
+allow linuxiac.com
+allow localhost
+allow microsoft.com
+allow sciencedirect.com
+allow otherwise
+allow program Discord
+allow program cargo
+allow program curl
+allow program git-remote-http
+allow program index.crates.io
+allow program pip
+allow program pipx
+allow program pypi.org
+allow program python3.12
+allow program spotify
+allow program yay
+flee word ai
+flee word ollama
+flee word rag
+feature system
