@@ -155,9 +155,6 @@ xsetroot -cursor_name left_ptr
 # Restore wallpaper
 bash ~/.fehbg
 
-# Enable wacom tablet
-/home/devales/.local/bash/wacom
-
 # Flameshot
 flameshot &
 
