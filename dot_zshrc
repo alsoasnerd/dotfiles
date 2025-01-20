@@ -3,17 +3,17 @@ eval "$(starship init zsh)"
 
 # exports
 export EDITOR='nvim'
-export OPENAI_API_KEY="{{ .openai.secretKey }}";
+export OPENAI_API_KEY="";
 export BROWSER='vivaldi-stable'
 export SAVEHIST=1000000000000000000
 export HISTSIZE=1000000000000000000
 export HISTFILE=~/.zsh_history
-export BSPDIR=/home/devales/.config/bspwm
+export BSPDIR=/home/alsoasnerd/.config/bspwm
 
 # fyw
-export FYW_DIR="/home/devales/.config/fyw"
-export FYPM_DIR="/home/devales/.config/fyw/fypm"
-export FYSM_DIR="/home/devales/.config/fyw/fysm"
+export FYW_DIR="/home/alsoasnerd/.config/fyw"
+export FYPM_DIR="/home/alsoasnerd/.config/fyw/fypm"
+export FYSM_DIR="/home/alsoasnerd/.config/fyw/fysm"
 export BSPLOCK=/tmp/fysm/bspwm.lock
 
 # set zsh options
@@ -61,24 +61,24 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # distrotunnel
-# source /home/devales/.local/share/distrobox/distrotunnel/distrotunnel.zsh
+# source /home/alsoasnerd/.local/share/distrobox/distrotunnel/distrotunnel.zsh
 
 # set keyboard layout
-setxkbmap -layout us -variant altgr-intl
+# setxkbmap -layout us -variant altgr-intl
 
 # Add cargo, bash scripts and nix to path
 export PATH="$HOME/.local/bash:$HOME/.config/llamafile/models:$HOME/.cargo/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/devales/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/alsoasnerd/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/devales/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/devales/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/alsoasnerd/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alsoasnerd/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/devales/miniconda3/bin:$PATH"
+        export PATH="/home/alsoasnerd/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -89,7 +89,7 @@ source <(fzf --zsh)
 source $FYW_DIR/config/fywrc
 
 # Mise setup
-eval "$(/home/devales/.local/bin/mise activate zsh)"
+eval "$(/home/alsoasnerd/.local/bin/mise activate zsh)"
 
 # load zsh-syntax-highlighting, should be last line
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
