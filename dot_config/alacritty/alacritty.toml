@@ -1,26 +1,42 @@
+[env]
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM = "xterm-256color"
+
+# Colors (Material Deep Ocean)
+[colors.primary]
+  background = "0x0F111A"
+  foreground = "0xA6ACCD"
+
+[colors.normal]
+  black = "0x000000"
+  blue = "0x6E98EB"
+  cyan = "0x71C6E7"
+  green = "0xABCF76"
+  magenta = "0xB480D6"
+  red = "0xDC6068"
+  white = "0xEEFFFF"
+  yellow = "0xE6B455"
+
+[colors.bright]
+  black = "0x464B5D" # Disabled color: for zsh-autosuggestions
+  blue = "0x82AAFF"
+  cyan = "0x89DDFF"
+  green = "0xC3E88D"
+  magenta = "0xC792EA"
+  red = "0xF07178"
+  white = "0xEEFFFF"
+  yellow = "0xFFCB6B"
+
 [colors]
 draw_bold_text_with_bright_colors = true
 
-[colors.primary]
-background = "#000000"
-foreground = "#A9B1D6"
-
-# -- default color configuration
-# [colors.primary.normal]
-# black = "#32344A"
-# blue = "#7AA2F7"
-# cyan = "#449DAB"
-# green = "#9ECE6A"
-# magenta = "#AD8EE6"
-# red = "#F7768E"
-# white = "#787C99"
-# yellow = "#E0AF68"
-
 [font]
-size = 8.0
+size = 13.0
 
 [font.normal]
 family = "CaskaydiaCove Nerd Font"
-
-[window]
-opacity = 0.9

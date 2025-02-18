@@ -1,6 +1,7 @@
 [user]
-	email = {{ .user.git.email }}
-	name = {{ .user.git.name }}
+	email = alsoasnerd@gmail.com
+	name = alsoasnerd
+	signingkey = /home/alsoasnerd/.ssh/id_ed25519.pub
 [safe]
 	directory = /opt/flutter
 [alias]
@@ -32,3 +33,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
